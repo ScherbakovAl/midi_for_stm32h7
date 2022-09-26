@@ -1,6 +1,6 @@
 # midi_for_stm32h7
 
-If you want to turn your stm32h7 device into a midi device, then the history of this code will tell you what needs to be changed in the code. (Also suitable for other boards, such as stm32f 411 and others)
+If you want to turn your stm32h7 device into a midi device, then the history of this code will tell you what needs to be changed in the code. (Also suitable for other boards, such as stm32f411 and others)
    Generated with CubeIDE.
    Connect USB_OTG_FS - Device only.
    USB_Device - select Communication Device Class (Virtual Port).
