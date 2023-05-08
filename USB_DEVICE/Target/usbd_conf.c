@@ -572,16 +572,16 @@ USBD_StatusTypeDef USBD_LL_SetUSBAddress(USBD_HandleTypeDef *pdev, uint8_t dev_a
   * @param  size: Data size
   * @retval USBD status
   */
-USBD_StatusTypeDef USBD_LL_Transmit(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint32_t size)
+USBD_LL_Transmit(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint32_t size)
 {
-  HAL_StatusTypeDef hal_status = HAL_OK;
-  USBD_StatusTypeDef usb_status = USBD_OK;
+//  HAL_StatusTypeDef hal_status = HAL_OK;
+//  USBD_StatusTypeDef usb_status = USBD_OK;
 
-  hal_status = HAL_PCD_EP_Transmit(pdev->pData, ep_addr, pbuf, size);
+//  hal_status = HAL_PCD_EP_Transmit(pdev->pData, ep_addr, pbuf, size);
+  HAL_PCD_EP_Transmit(pdev->pData, ep_addr, pbuf, size);
+//  usb_status =  USBD_Get_USB_Status(hal_status);
 
-  usb_status =  USBD_Get_USB_Status(hal_status);
-
-  return usb_status;
+//  return usb_status;
 }
 
 /**

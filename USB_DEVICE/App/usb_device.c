@@ -88,7 +88,7 @@ void MX_USB_DEVICE_Init(void) {
 	txbuf[0] = 0x9; //??
 	txbuf[1] = 0xB0 | 0x00; //0xB0 - Control Change (for hi-res midi) | channel
 	txbuf[2] = 0x7F & 88; // 88 (for hi-res midi)
-	txbuf[3] = 0x7F & 81; //velocity xx.80
+	txbuf[3] = 0x7F & 75; //velocity xx.75
 
 	txbuf[4] = 0x9; //??
 	txbuf[5] = 0x90 | 0x00; //0x8 - note off, 0x9 - note on | channel
@@ -96,6 +96,7 @@ void MX_USB_DEVICE_Init(void) {
 	txbuf[7] = 0x7F & 86; //velocity 86.xx
 
 	HAL_Delay(1000);
+
 	while (1) {
 		USBD_LL_Transmit(&hUsbDeviceFS, 0x81, txbuf, 8);
 		HAL_Delay(1000);
