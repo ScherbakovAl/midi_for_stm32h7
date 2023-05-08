@@ -99,7 +99,7 @@ void MX_USB_DEVICE_Init(void) {
 
 	while (1) {
 		USBD_LL_Transmit(&hUsbDeviceFS, 0x81, txbuf, 8);
-		HAL_Delay(1000);
+		HAL_Delay(100);
 	}
 	/* USER CODE END USB_DEVICE_Init_PostTreatment */
 }
